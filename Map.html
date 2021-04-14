@@ -283,6 +283,7 @@
                     break
             }
         })
+        // 드래그 후 이동
         window.addEventListener('mousemove' , (e) => {
             if(LeftDragging && e.x > -1) {
                 LeftHandle.style.left = e.x+'px';
@@ -291,6 +292,7 @@
                 RightHandle.style.left = e.x+'px'
             }
         })
+        // 드래그 후 커서를 뗀다
         window.addEventListener('mouseup', (e) => {
             LeftDragging = false
             RightDragging = false
@@ -333,6 +335,7 @@
         ];
         let map;
         let clickImg = document.querySelector('.clickImg')
+        // 아래에 오는 모든 코드는 맵 출력과 관련이 있음
         async function initMap() {
 
             // 맵 (뼈대)
